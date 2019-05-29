@@ -11,10 +11,11 @@ class App extends Component {
         allBooks:[]
       }
     }
-
-    componentDidMount(){
+  
+  
+    fiction=()=>{
       const urlFiction = "https://api.nytimes.com/svc/books/v3/lists/current/Hardcover%20Fiction.json?api-key=AYVlgIMoj1SLFq79F0Kbjn46f2eGnERX"
-      const urlNonFiction = "https://api.nytimes.com/svc/books/v3/lists/current/Hardcover%20Nonfiction.json?api-key=AYVlgIMoj1SLFq79F0Kbjn46f2eGnERX"
+     
       // api call
       axios({
         method:'GET',
@@ -28,6 +29,11 @@ class App extends Component {
           allBooks:responseFiction
         })
       })
+    }
+
+    nonFiction=()=>{
+      const urlNonFiction = "https://api.nytimes.com/svc/books/v3/lists/current/Hardcover%20Nonfiction.json?api-key=AYVlgIMoj1SLFq79F0Kbjn46f2eGnERX"
+
       axios({
         method:'GET',
         url:urlNonFiction,
@@ -44,7 +50,9 @@ class App extends Component {
     render(){
       return (
         <div className="App">
-          <h1>Hey There :)</h1>
+          <h1>Book of the Week</h1>
+          <button onClick={this.fiction}>Fiction</button>
+          <button onClick={this.nonFiction}>Non Fiction</button>
         </div>
       );
   }
