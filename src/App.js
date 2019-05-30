@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
-import Result from './Results.js'
+// import Result from './Result.js'
 
 class App extends Component {
 
@@ -44,7 +44,7 @@ class App extends Component {
       return randomNf;
     }
     // non fiction array call
-    nonFiction=()=>{
+    nonFiction = () => {
       const urlNonFiction = "https://api.nytimes.com/svc/books/v3/lists/current/Hardcover%20Nonfiction.json?api-key=AYVlgIMoj1SLFq79F0Kbjn46f2eGnERX"
 
       axios({
@@ -68,8 +68,21 @@ class App extends Component {
           <button onClick={this.fiction}>Fiction</button>
           {/* on nonFiction click, display */}
           <button onClick={this.nonFiction}>Non Fiction</button>
-          <Result />
+          <div>
+            {this.state.allBooks.map( (book) =>{
+              return(
+              <h2>{book.title}</h2>
+              )
+            })}
+            
+            
+          </div>
+
+
+
+          {/* <Result /> */}
         </div>
+      
 
       );
   }
