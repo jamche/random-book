@@ -1,18 +1,20 @@
-import React, {Component} from 'react'
+// import React, {Component, Fragment} from 'react'
 
 
-class Result extends Component{
-  render(){
-    return(
-        <div>
-          <h2>{}</h2>
-          <p></p>
-          <p></p>
-          <img src="#" alt=""/>
-          <a href="#"><p></p></a>
-        </div>
-    )
-  }
-}
+// class Result extends Component{
+//   render(){
+//     return(
+//       <Fragment>
+//         <div>
+//           {/* <h2>{.title}</h2> */}
+//           <p></p>
+//           <p></p>
+//           <img src="#" alt=""/>
+//           <a href="#"><p></p></a>
+//         </div>
+//       </Fragment>
+//     )
+//   }
+// }
 
-export default Result;
+// export default Result;

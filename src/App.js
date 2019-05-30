@@ -59,23 +59,54 @@ class App extends Component {
         })
       })
     }
+    // randomize manga
+  randomManga = (responseManga) => {
+    const randomM = []
+    randomM.push(responseManga[Math.floor(Math.random() * responseManga.length)]);
+    console.log(randomM)
+    return randomM;
+  }
+    // manga genre call
+    manga = () => {
+      const urlManga = "https://api.nytimes.com/svc/books/v3/lists/current/Manga.json?api-key=AYVlgIMoj1SLFq79F0Kbjn46f2eGnERX"
+      axios({
+        method:'GET',
+        url:urlManga,
+        dataResponse:'json'
+      }).then(responseManga => {
+        responseManga =  responseManga.data.results.books
+        console.log(responseManga)
+        this.setState({
+          allBooks:this.randomManga(responseManga)
+        })
+      })
+    }
+    
 
     render(){
       return (
-        <div className="App">
+        <div className="App wrapper">
           <h1>Book of the Week</h1>
+          <p>Don't know what to read? Click one of the two options below to get a book recommendation from the NY Times Best Sellers.</p>
           {/* on fiction click, display results */}
           <button onClick={this.fiction}>Fiction</button>
           {/* on nonFiction click, display */}
           <button onClick={this.nonFiction}>Non Fiction</button>
+          {/* on humor click, display */}
+          <button onClick = {this.manga}>Manga</button>
           <div>
             {this.state.allBooks.map( (book) =>{
               return(
-              <h2>{book.title}</h2>
+                <div className="app-result">
+                  <h2>{book.title}</h2>
+                  <p>Author: {book.author}</p>
+                  <p>Description: {book.description}</p>
+                  <img src={book.book_image} alt={book.title}/>
+                  <p>Buy on : <a href={book.amazon_product_url}>Amazon</a></p>
+                  <p>New selections every week! Come by next week to get a recommendation from a new Selection</p>
+                </div>
               )
-            })}
-            
-            
+            })}            
           </div>
 
 
