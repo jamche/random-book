@@ -1,5 +1,11 @@
+body{
+  background:#f4dbd8;
+}
+
+
 .App {
   text-align: center;
+  
 }
 .wrapper{
   margin: 0 10%;
@@ -12,4 +18,13 @@ img{
   width: 30%;
   margin: 0 auto;
 
+}
+
+button{
+  padding: 12.5px 40px;
+  margin: 0 2%;
+  border-radius:50px;
+  border:none;
+  
+  
 }

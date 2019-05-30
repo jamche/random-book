@@ -81,6 +81,28 @@ class App extends Component {
         })
       })
     }
+    // randomize picture
+    randomPicture = (responsePictureBook) =>{
+      const randomPb = []
+      randomPb.push(responsePictureBook[Math.floor(Math.random() * responsePictureBook.length)]);
+      console.log(randomPb)
+      return randomPb;
+    }
+    // picture books
+    pictureBook = () =>{
+      const urlPictureBook = "https://api.nytimes.com/svc/books/v3/lists/current/Picture%20Books.json?api-key=AYVlgIMoj1SLFq79F0Kbjn46f2eGnERX"
+      axios({
+        method:'GET',
+        url:urlPictureBook,
+        dataResponse:'json'
+      }).then(responsePictureBook => {
+        responsePictureBook = responsePictureBook.data.results.books
+        console.log(responsePictureBook)
+        this.setState({
+          allBooks:this.randomPicture(responsePictureBook)
+        })
+      })
+    }
     
 
     render(){
@@ -94,6 +116,8 @@ class App extends Component {
           <button onClick={this.nonFiction}>Non Fiction</button>
           {/* on humor click, display */}
           <button onClick = {this.manga}>Manga</button>
+          {/* on picture click display */}
+          <button onClick = {this.pictureBook}>Picture Book</button>
           <div>
             {this.state.allBooks.map( (book) =>{
               return(
