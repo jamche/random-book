@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
-// import Result from './Result.js'
 
 class App extends Component {
 
@@ -103,21 +102,35 @@ class App extends Component {
         })
       })
     }
-    
-
     render(){
       return (
         <div className="App wrapper">
+          <div>
           <h1>Book of the Week</h1>
-          <p>Don't know what to read? Click one of the two options below to get a book recommendation from the NY Times Best Sellers.</p>
+          <p>Don't know what to read? Click one of the options below to get a book recommendation from the NY Times Best Sellers.</p>
           {/* on fiction click, display results */}
-          <button onClick={this.fiction}>Fiction</button>
+          </div>
+          <div>
+          <button 
+          onClick = {this.fiction}
+          className = "button1"
+          >Fiction</button>
           {/* on nonFiction click, display */}
-          <button onClick={this.nonFiction}>Non Fiction</button>
-          {/* on humor click, display */}
-          <button onClick = {this.manga}>Manga</button>
+          <button 
+          onClick = {this.nonFiction}
+          className = "button2"
+          >Non Fiction</button>
+          {/* on manga click, display */}
+          <button 
+          onClick = {this.manga}
+          className = "button3"
+          >Manga</button>
           {/* on picture click display */}
-          <button onClick = {this.pictureBook}>Picture Book</button>
+          <button 
+          onClick = {this.pictureBook}
+          className ="button4"
+          >Picture Book</button>
+          </div>
           <div>
             {this.state.allBooks.map( (book) =>{
               return(
@@ -125,22 +138,17 @@ class App extends Component {
                   <h2>{book.title}</h2>
                   <p>Author: {book.author}</p>
                   <p>Description: {book.description}</p>
-                  <img src={book.book_image} alt={book.title}/>
+                  <img src={book.book_image} alt={book.title} className = "swirl-in-fwd"/>
                   <p>Buy on : <a href={book.amazon_product_url}>Amazon</a></p>
                   <p>New selections every week! Come by next week to get a recommendation from a new Selection</p>
+                  <p>Don't like your recommendation?Click one of the buttons again to get another result!</p>
                 </div>
               )
             })}            
           </div>
-
-
-
-          {/* <Result /> */}
-        </div>
-      
-
+        </div> 
       );
-  }
+    }
 }
 
 export default App;

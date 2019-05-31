@@ -1,7 +1,10 @@
 body{
   background:#f4dbd8;
 }
-
+*{
+  margin: 0;
+  padding:0;
+}
 
 .App {
   text-align: center;
@@ -21,10 +24,43 @@ img{
 }
 
 button{
-  padding: 12.5px 40px;
+  padding: 25px 80px;
   margin: 0 2%;
   border-radius:50px;
   border:none;
-  
-  
+}
+
+/* picture of book animation */
+.swirl-in-fwd {
+	-webkit-animation: swirl-in-fwd 0.6s ease-out both;
+	        animation: swirl-in-fwd 0.6s ease-out both;
+}
+/**
+ * ----------------------------------------
+ * animation swirl-in-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes swirl-in-fwd {
+  0% {
+    -webkit-transform: rotate(-540deg) scale(0);
+            transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0) scale(1);
+            transform: rotate(0) scale(1);
+    opacity: 1;
+  }
 }
