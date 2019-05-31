@@ -1,35 +1,67 @@
 body{
-  background:#f4dbd8;
+  background:url(./assets/library.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;  
+  min-height:100vh;
 }
-*{
+h1,h1,h3,h4,p,ul,li,a,button{
   margin: 0;
   padding:0;
 }
 
 .App {
   text-align: center;
-  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .wrapper{
   margin: 0 10%;
+}
+/* style title */
+h1{
+  font-family: 'Cinzel Decorative', cursive;
+}
+h1,
+h2{
+  color: white;
+  margin: 1%;
+}
+p{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+.buttons{
+  /* background: rgba(0,0,0,.8); */
+}
+button{
+  font-family: 'Raleway', sans-serif;
+  padding: 12.5px 40px;
+  margin: 2%;
+  border-radius:50px;
+  border:none;
+}
+/* style the results */
+.darkBack{
+  background:rgba(0,0,0,0.8);
+}
+.darkBack p{
+  width: 50%;
+  margin: 1% auto;
 }
 .app-result{
   display: flex;
   flex-direction:column;
 }
+.result{
+  display: flex;
+}
 img{
-  width: 30%;
+  width: 100%;
   margin: 0 auto;
-
 }
-
-button{
-  padding: 25px 80px;
-  margin: 0 2%;
-  border-radius:50px;
-  border:none;
-}
-
 /* picture of book animation */
 .swirl-in-fwd {
 	-webkit-animation: swirl-in-fwd 0.6s ease-out both;
@@ -63,4 +95,9 @@ button{
             transform: rotate(0) scale(1);
     opacity: 1;
   }
+}
+
+/* footer */
+footer{
+  background:rgba(0,0,0,1);
 }
