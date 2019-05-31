@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
+import Footer from './Footer.js'
 
 class App extends Component {
 
@@ -144,7 +145,8 @@ class App extends Component {
                   <p>Don't like your recommendation?Click one of the buttons again to get another result!</p>
                 </div>
               )
-            })}            
+            })}
+            <Footer/>            
           </div>
         </div> 
       );
