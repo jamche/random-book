@@ -107,7 +107,7 @@ class App extends Component {
     render(){
       return (
         <div className="App">
-          <div className="darkBack wrapper">
+          <div className="darkBack">
             <h1>Book of the Week</h1>
             <p>Don't know what to read? Click one of the options below to get a book recommendation from the NY Times Best Sellers.</p>
           </div>
@@ -115,22 +115,22 @@ class App extends Component {
             {/* on fiction click, display results */}
             <button 
             onClick = {this.fiction}
-            className = "button1"
+              className= "button"
             >Fiction</button>
             {/* on nonFiction click, display */}
             <button 
             onClick = {this.nonFiction}
-            className = "button2"
+            className = "button"
             >Non Fiction</button>
             {/* on manga click, display */}
             <button 
             onClick = {this.manga}
-            className = "button3"
+            className = "button"
             >Manga</button>
             {/* on picture click display */}
             <button 
             onClick = {this.pictureBook}
-            className ="button4"
+            className ="button"
             >Picture Book</button>
           </div>
           <div className="wrapper">
@@ -140,12 +140,12 @@ class App extends Component {
                   <div className="imgContain">
                     <img src={book.book_image} alt={book.title} className="swirl-in-fwd" />
                   </div>
-                  <div className="resultContent">
+                  <div className="resultContent tracking-in-expand-fwd-top">
                     <h2>{book.title}</h2>
-                    <p>Author: {book.author}</p>
-                    <p>Description: {book.description}</p>
-                    <p>New selections every week! Don't like your recommendation?Click one of the buttons again to get another result!</p>
-                    <p>Buy on : <a href={book.amazon_product_url}>Amazon</a></p>
+                    <p><span>Author</span> : {book.author}</p>
+                    <p><span>Description</span> : {book.description}</p>
+                    <p>New selections every week! Don't like your book? Click one of the buttons again to get another result!</p>
+                    <p>Get your book here : <a href={book.amazon_product_url}><i class="fab fa-amazon"></i></a></p>
                   </div>
                 </div>
               )

@@ -11,7 +11,7 @@ h1,h1,h3,h4,p,ul,li,a,button{
 }
 a{
   text-decoration: underline;
-  color: seashell;
+  color: rgb(255,245,238);
 }
 
 .wrapper{
@@ -20,6 +20,7 @@ a{
 img{
   width: 100%;
   margin: 0 auto;
+  display: inline-block;
 }
 
 .App {
@@ -36,11 +37,11 @@ h1{
 }
 h1,
 h2{
-  color: seashell;
+  color: rgb(255,245,238);
   margin: .5%;
 }
 p{
-  color: seashell;
+  color: rgb(255,245,238);
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
   font-size: 20px;
@@ -51,16 +52,32 @@ p{
   margin-bottom: 1%;
 }
 button{
-  background: black;
-  color:seashell;
+  background: rgb(0,100,0);
+  color:rgb(255,245,238);
   font-family: 'Raleway', sans-serif;
   padding: 12.5px 40px;
   margin: 2%;
   border-radius:50px;
   border:none;
   font-size: 20px;
-
+  cursor:pointer;
 }
+.button{
+  border: none;
+  display: inline-block;
+}
+.button:hover,
+.button:focus{
+  color: #404040;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: rgb(255,245,238);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(255,245,238.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(255,245,238, 0.57);
+  transition: all 0.3s ease 0s;
+}
+
+
 /* style the results */
 .darkBack{
   background:rgba(0,0,0,0.8);
@@ -77,13 +94,21 @@ button{
   display: flex;
   margin: 0 auto;
   width: 70%;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 1%;
-  background: rgba(0,0,0,.9);
-
 }
 .imgContain{  
-  width: 35%;
+  width: 30%;
+}
+img{
+  position: relative;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  box-shadow: 20px 20px rgba(253,245,230,.25);
+  transition: all .4s ease;
+}
+img:hover{
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(253,245,230,.5);
 }
 .resultContent{
     padding: 2%;
@@ -91,15 +116,30 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: rgba(0,0,0,.9);
+
 }
 .resultContent h2{
-  margin-bottom: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size:30px;
+  margin-bottom: 2%;
+}
+.resultContent span{
+  font-size: 24px;
 }
 .resultContent p{
   text-align: left;
-  margin:1% auto;
+  margin: 1% auto;
 }
 
+.resultContent i{
+  font-size: 24px;
+}
+.resultContent i:hover,
+.resultContent i:focus {
+  color: orange;
+  font-size: 30px;
+}
 
 /* footer */
 footer{
@@ -143,3 +183,52 @@ footer{
   }
 }
 
+/* resultContent animation */
+.tracking-in-expand-fwd-top {
+	-webkit-animation: tracking-in-expand-fwd-top 0.6s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd-top 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand-fwd-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* References */
+/* Animista for awesome animations */
+
+/* https://www.magnet4blogging.net/button-styles/ */
+/* for the button hover and focus effects  */
