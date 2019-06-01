@@ -137,16 +137,15 @@ class App extends Component {
             {this.state.allBooks.map((book) => {
               return (
                 <div className="result">
-                  <div>
+                  <div className="imgContain">
                     <img src={book.book_image} alt={book.title} className="swirl-in-fwd" />
                   </div>
-                  <div>
+                  <div className="resultContent">
                     <h2>{book.title}</h2>
                     <p>Author: {book.author}</p>
                     <p>Description: {book.description}</p>
+                    <p>New selections every week! Don't like your recommendation?Click one of the buttons again to get another result!</p>
                     <p>Buy on : <a href={book.amazon_product_url}>Amazon</a></p>
-                    <p>New selections every week! Come by next week to get a recommendation from a new Selection</p>
-                    <p>Don't like your recommendation?Click one of the buttons again to get another result!</p>
                   </div>
                 </div>
               )
