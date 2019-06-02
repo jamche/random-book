@@ -10,6 +10,7 @@ class App extends Component {
       // create initial state
       this.state = {
         allBooks:[]
+
       }
     }
     // randomize fiction array
@@ -133,18 +134,20 @@ class App extends Component {
             >Picture Book</button>
           </div>
           <div className="wrapper">
+
             {this.state.allBooks.map((book) => {
+
               return (
                 <div className="result">
                   <div className="imgContain">
-                    <img src={book.book_image} alt={book.title} className="swirl-in-fwd" />
+                    <img src={book.book_image} alt={book.title} className='swirl-in-fwd'/>
                   </div>
                   <div className="resultContent tracking-in-expand-fwd-top">
                     <h2>{book.title}</h2>
                     <p><span>Author</span> : {book.author}</p>
                     <p><span>Synopsis</span> : {book.description}</p>
                     <p> Click one of the options above again to get another result if you're not satisfied.</p>
-                    <p>Get your book here : <a href={book.amazon_product_url}><i class="fab fa-amazon"></i></a></p>
+                    <p>Get your book here : <a href={book.amazon_product_url}> Amazon <i className="fab fa-amazon" aria-hidden="true" title="Click to go to Amazon.com to purchase the book"></i></a></p>
                   </div>
                 </div>
               )
