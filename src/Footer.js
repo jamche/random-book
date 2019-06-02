@@ -7,7 +7,7 @@ class Footer extends Component {
     return(
       <div>
         <footer>
-          <p>Copyright Jamie Yeung 2019 | Data taken from NY TImes Books API</p>
+          <p>Copyright Jamie Yeung 2019 | Data taken from <a href="https://developer.nytimes.com/docs/books-product/1/overview">NY TImes Books API</a></p>
         </footer>
       </div>
     )

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
-// import Result from './Result.js';
 import Footer from './Footer.js';
 
 class App extends Component {
@@ -109,7 +108,7 @@ class App extends Component {
         <div className="App">
           <div className="darkBack">
             <h1>Book of the Week</h1>
-            <p>Don't know what to read? Click one of the options below to get a book recommendation from the NY Times Best Sellers.</p>
+            <p>Don't know what to read? Click one of the options below to get a book recommendation on the genre selected.</p>
           </div>
           <div className="buttons wrapper">
             {/* on fiction click, display results */}
@@ -143,8 +142,8 @@ class App extends Component {
                   <div className="resultContent tracking-in-expand-fwd-top">
                     <h2>{book.title}</h2>
                     <p><span>Author</span> : {book.author}</p>
-                    <p><span>Description</span> : {book.description}</p>
-                    <p>New selections every week! Don't like your book? Click one of the buttons again to get another result!</p>
+                    <p><span>Synopsis</span> : {book.description}</p>
+                    <p> Click one of the options above again to get another result if you're not satisfied.</p>
                     <p>Get your book here : <a href={book.amazon_product_url}><i class="fab fa-amazon"></i></a></p>
                   </div>
                 </div>
