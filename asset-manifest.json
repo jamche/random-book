@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jamieYeungRandomBookProject/static/css/main.41c6f27e.chunk.css",
+    "main.css": "/jamieYeungRandomBookProject/static/css/main.8d50ff02.chunk.css",
     "main.js": "/jamieYeungRandomBookProject/static/js/main.e926f741.chunk.js",
     "main.js.map": "/jamieYeungRandomBookProject/static/js/main.e926f741.chunk.js.map",
     "runtime~main.js": "/jamieYeungRandomBookProject/static/js/runtime~main.8a1af6f5.js",
@@ -8,9 +8,9 @@
     "static/js/2.7f0fdec7.chunk.js": "/jamieYeungRandomBookProject/static/js/2.7f0fdec7.chunk.js",
     "static/js/2.7f0fdec7.chunk.js.map": "/jamieYeungRandomBookProject/static/js/2.7f0fdec7.chunk.js.map",
     "index.html": "/jamieYeungRandomBookProject/index.html",
-    "precache-manifest.a60f9124126120aaa89e97a0d5f76db5.js": "/jamieYeungRandomBookProject/precache-manifest.a60f9124126120aaa89e97a0d5f76db5.js",
+    "precache-manifest.ada601fa0a835972524501178751ffcd.js": "/jamieYeungRandomBookProject/precache-manifest.ada601fa0a835972524501178751ffcd.js",
     "service-worker.js": "/jamieYeungRandomBookProject/service-worker.js",
-    "static/css/main.41c6f27e.chunk.css.map": "/jamieYeungRandomBookProject/static/css/main.41c6f27e.chunk.css.map",
+    "static/css/main.8d50ff02.chunk.css.map": "/jamieYeungRandomBookProject/static/css/main.8d50ff02.chunk.css.map",
     "static/media/App.css": "/jamieYeungRandomBookProject/static/media/library.b3622c0e.jpg"
   }
 }
