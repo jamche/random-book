@@ -246,6 +246,7 @@ footer{
 }
 @media screen and (max-width:500px){
   .darkBack p{
+    width: 80%;
     margin: 2% auto;
   }
   .button{
@@ -261,9 +262,8 @@ footer{
     padding: 2%;
   }
 }
-
 /* References */
-/* Animista for awesome animations */
 
+/* Animista for awesome animations */
 /* https://www.magnet4blogging.net/button-styles/ */
 /* for the button hover and focus effects  */

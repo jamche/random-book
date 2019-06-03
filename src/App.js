@@ -118,7 +118,7 @@ class App extends Component {
             onClick = {this.manga}
             className = "button"
             >Manga</button>
-            {/* on picture click display */}
+            {/* on picture book click display */}
             <button 
             onClick = {this.pictureBook}
             className ="button"
