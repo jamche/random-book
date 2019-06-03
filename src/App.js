@@ -10,14 +10,12 @@ class App extends Component {
       // create initial state
       this.state = {
         allBooks:[]
-
       }
     }
     // randomize fiction array
     randomFiction = (responseFiction) => {
       const randomF = []
       randomF.push(responseFiction[Math.floor(Math.random() * responseFiction.length)]);
-      console.log(randomF)
       return randomF;
     }
     // fiction array call
@@ -30,7 +28,6 @@ class App extends Component {
         dataResponse:'json'
       }).then(responseFiction => {       
         responseFiction = responseFiction.data.results.books
-        console.log(responseFiction) 
 
         this.setState({
           allBooks: this.randomFiction(responseFiction)
@@ -41,7 +38,6 @@ class App extends Component {
     randomNonFiction = (responseNonFiction) => {
       const randomNf = []
       randomNf.push(responseNonFiction[Math.floor(Math.random() * responseNonFiction.length)]);
-      console.log(randomNf)
       return randomNf;
     }
     // non fiction array call
@@ -54,7 +50,6 @@ class App extends Component {
         dataResponse:'json'
       }).then(responseNonFiction=>{
         responseNonFiction = responseNonFiction.data.results.books
-        console.log(responseNonFiction)
         this.setState({
           allBooks:this.randomNonFiction(responseNonFiction)
         })
@@ -64,7 +59,6 @@ class App extends Component {
   randomManga = (responseManga) => {
     const randomM = []
     randomM.push(responseManga[Math.floor(Math.random() * responseManga.length)]);
-    console.log(randomM)
     return randomM;
   }
     // manga genre call
@@ -76,7 +70,6 @@ class App extends Component {
         dataResponse:'json'
       }).then(responseManga => {
         responseManga =  responseManga.data.results.books
-        console.log(responseManga)
         this.setState({
           allBooks:this.randomManga(responseManga)
         })
@@ -86,7 +79,6 @@ class App extends Component {
     randomPicture = (responsePictureBook) =>{
       const randomPb = []
       randomPb.push(responsePictureBook[Math.floor(Math.random() * responsePictureBook.length)]);
-      console.log(randomPb)
       return randomPb;
     }
     // picture books
@@ -98,7 +90,6 @@ class App extends Component {
         dataResponse:'json'
       }).then(responsePictureBook => {
         responsePictureBook = responsePictureBook.data.results.books
-        console.log(responsePictureBook)
         this.setState({
           allBooks:this.randomPicture(responsePictureBook)
         })
@@ -109,7 +100,7 @@ class App extends Component {
         <div className="App">
           <div className="darkBack">
             <h1>Book of the Week</h1>
-            <p>Don't know what to read? Click one of the options below to get a book recommendation on the genre selected.</p>
+            <p>Don't know what to read? No problem, just click one of the genres below for a book recommendation from the NY Times Best Sellers of the week!</p>
           </div>
           <div className="buttons wrapper">
             {/* on fiction click, display results */}

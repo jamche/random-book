@@ -41,8 +41,6 @@ img:hover{
 h1{
   font-family: 'Cinzel Decorative', cursive;
   font-size: 50px;
-}
-h1{
   color: rgb(255,245,238);
   margin: 1%;
 }
@@ -52,6 +50,7 @@ p{
   line-height: 1.5;
   font-size: 20px;
 }
+/* style buttons */
 .buttons{
   display: flex;
   justify-content: space-between;
@@ -79,8 +78,7 @@ button{
   letter-spacing: 2px;
   background: rgb(255,245,238);
   box-shadow: 0px 5px 40px -10px rgba(255,245,238);
-  }
-
+}
 /* style the results */
 .darkBack{
   background:rgba(0,0,0,0.8);
@@ -132,13 +130,13 @@ button{
   margin: 2%;
 }
 .resultContent i{
-  display: inline-block;
-  font-size: 24px;
+  margin: 1%;
+  font-size: 20px;
   transition:.3s all;
 }
 .resultContent i:hover,
 .resultContent i:focus {
-  color: orange;
+  color: rgb(0,100,0);
   font-size: 30px;
 }
 
