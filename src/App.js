@@ -127,6 +127,7 @@ class App extends Component {
           <div className="wrapper">
 
             {this.state.allBooks.map((book) => {
+              console.log(book)
 
               return (
                 <div className="result">
