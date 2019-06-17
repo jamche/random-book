@@ -102,7 +102,7 @@ class App extends Component {
             <h1>Book of the Week</h1>
             <p>Don't know what to read? No problem, just click one of the genres below for a book recommendation from the NY Times Best Sellers of the week!</p>
           </div>
-          <div className="buttons wrapper">
+          <div className="buttons wrapper bounce-in-left">
             {/* on fiction click, display results */}
             <button 
             onClick = {this.fiction}
@@ -139,7 +139,7 @@ class App extends Component {
                     <p><span>Author</span> : {book.author}</p>
                     <p><span>Synopsis</span> : {book.description}</p>
                     <p> Click one of the options above again to get another result if you're not satisfied.</p>
-                    <p>Get your book here : <a href={book.amazon_product_url}> Amazon <i className="fab fa-amazon" aria-hidden="true" title="Click to go to Amazon.com to purchase the book"></i></a></p>
+                    <p>Get your book here : <a href={book.amazon_product_url}> Amazon </a></p>
                   </div>
                 </div>
               )
