@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/jamieYeungRandomBookProject/static/css/main.4f54a54c.chunk.css",
-    "main.js": "/jamieYeungRandomBookProject/static/js/main.40d3bf09.chunk.js",
-    "main.js.map": "/jamieYeungRandomBookProject/static/js/main.40d3bf09.chunk.js.map",
+    "main.css": "/jamieYeungRandomBookProject/static/css/main.e83ddd1a.chunk.css",
+    "main.js": "/jamieYeungRandomBookProject/static/js/main.96ebaf53.chunk.js",
+    "main.js.map": "/jamieYeungRandomBookProject/static/js/main.96ebaf53.chunk.js.map",
     "runtime~main.js": "/jamieYeungRandomBookProject/static/js/runtime~main.8a1af6f5.js",
     "runtime~main.js.map": "/jamieYeungRandomBookProject/static/js/runtime~main.8a1af6f5.js.map",
     "static/js/2.7f0fdec7.chunk.js": "/jamieYeungRandomBookProject/static/js/2.7f0fdec7.chunk.js",
     "static/js/2.7f0fdec7.chunk.js.map": "/jamieYeungRandomBookProject/static/js/2.7f0fdec7.chunk.js.map",
     "index.html": "/jamieYeungRandomBookProject/index.html",
-    "precache-manifest.9f8ad902f31f233f30cc0eb9c9556a10.js": "/jamieYeungRandomBookProject/precache-manifest.9f8ad902f31f233f30cc0eb9c9556a10.js",
+    "precache-manifest.d5a3d6799e3d4ec3ef4d90da8d74a0e3.js": "/jamieYeungRandomBookProject/precache-manifest.d5a3d6799e3d4ec3ef4d90da8d74a0e3.js",
     "service-worker.js": "/jamieYeungRandomBookProject/service-worker.js",
-    "static/css/main.4f54a54c.chunk.css.map": "/jamieYeungRandomBookProject/static/css/main.4f54a54c.chunk.css.map",
+    "static/css/main.e83ddd1a.chunk.css.map": "/jamieYeungRandomBookProject/static/css/main.e83ddd1a.chunk.css.map",
     "static/media/App.css": "/jamieYeungRandomBookProject/static/media/library.b3622c0e.jpg"
   }
 }
