@@ -138,8 +138,8 @@ class App extends Component {
                     <h2>{book.title}</h2>
                     <p><span>Author</span> : {book.author}</p>
                     <p><span>Synopsis</span> : {book.description}</p>
-                    <p> Click one of the options above again to get another result if you're not satisfied.</p>
                     <p>Get your book here : <a href={book.amazon_product_url}> Amazon </a></p>
+                    <p> Click one of the options above again to get another result if you're not satisfied.</p>
                   </div>
                 </div>
               )
